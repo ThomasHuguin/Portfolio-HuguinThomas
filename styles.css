@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.containers {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+section {
+    padding: 20px 0;
+}
+
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: ;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Styles pour les boutons du menu */
+.menu-button {
+    background-color: #848484; /* Fond gris foncé */
+    color: #fff; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour */
+    cursor: pointer; /* Curseur en forme de main */
+    text-align: center; /* Centrer le texte */
+    display: inline-block; /* Affichage en ligne */
+    margin: 5px; /* Marge entre les boutons */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+.menu-button:hover {
+    background-color: #555; /* Fond gris plus clair au survol */
+}
+
+.menu-button:focus {
+    outline: none; /* Supprimer le contour au focus */
+}
+
+* Ajout d'une animation pour les sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Amélioration de la section contact */
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact ul li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Amélioration de la section compétences */
+#competences ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+#competences ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section expériences */
+#experiences ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section formations */
+#formations ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section loisirs */
+#loisirs ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
