@@ -154,22 +154,22 @@ footer p {
 
 /* Styles pour les boutons du menu */
 .menu-button {
-    background-color: #848484; /* Fond gris foncé */
-    color: #fff; /* Texte blanc */
-    padding: 12px 24px; /* Espacement interne */
-    border: none; /* Pas de bordure */
-    outline: none; /* Pas de contour */
-    cursor: pointer; /* Curseur en forme de main */
-    text-align: center; /* Centrer le texte */
-    display: inline-block; /* Affichage en ligne */
-    margin: 5px; /* Marge entre les boutons */
-    border-radius: 5px; /* Coins arrondis */
-    transition: background-color 0.3s ease; /* Transition fluide */
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 25px; /* Boutons arrondis */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .menu-button:hover {
-    background-color: #555; /* Fond gris plus clair au survol */
-
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 .menu-button:focus {
