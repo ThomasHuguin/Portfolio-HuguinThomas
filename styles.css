@@ -305,16 +305,26 @@ section {
     }
 
     header {
-        padding: 30px 0;
-        border-radius: 10px;
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 1.5em;
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
     header h2 {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin: 5px 0 0;
+        font-weight: 300;
+        color: #ddd;
     }
 
     .container, .containers {
@@ -322,45 +332,44 @@ section {
         padding: 20px;
     }
 
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
     nav ul {
-        flex-direction: column; /* Afficher les boutons en colonne */
-        gap: 8px; /* Réduire l'espacement entre les boutons */
-        width: 100%; /* Occuper toute la largeur disponible */
-        padding: 0; /* Supprimer le padding par défaut */
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        padding: 0;
     }
 
     nav ul li {
-        width: 100%; /* Chaque bouton occupe toute la largeur */
-        margin: 0; /* Supprimer les marges par défaut */
+        width: 100%;
+        margin: 0;
     }
 
     nav ul li a {
-        display: flex; /* Utiliser flexbox pour centrer le texte */
-        justify-content: center; /* Centrer horizontalement */
-        align-items: center; /* Centrer verticalement */
-        text-align: center; /* Centrer le texte */
-        padding: 10px 0; /* Réduire l'espacement vertical */
-        font-size: 0.9em; /* Taille de police plus petite */
-        border-radius: 6px; /* Coins arrondis */
-        background-color: #444; /* Fond légèrement plus clair */
-        color: white; /* Texte blanc */
-        text-decoration: none; /* Supprimer le soulignement */
-        border: 1px solid #555; /* Bordure subtile */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
-        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9em;
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+        border-bottom: 1px solid #555;
+        transition: background-color 0.3s ease;
     }
 
     nav ul li a:hover {
-        background-color: #555; /* Effet de survol */
-        transform: translateY(-1px); /* Légère élévation au survol */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée */
+        background-color: #444;
     }
 
-    nav {
-        padding: 8px 0; /* Réduire l'espacement du menu */
-        background-color: #333; /* Fond sombre pour le menu */
-        border-radius: 8px; /* Coins arrondis pour le menu */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    /* Supprimer le dernier séparateur */
+    nav ul li:last-child a {
+        border-bottom: none;
     }
 
     
