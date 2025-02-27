@@ -189,6 +189,31 @@
         </ul>
     </section>
 
+<!-- Bouton de retour en haut de la page -->
+<button id="back-to-top" title="Retour en haut">&#8679;</button>
+
+<script>
+    // Récupérer le bouton
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Afficher le bouton lorsque l'utilisateur fait défiler la page vers le bas
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Faire défiler la page vers le haut lorsque l'utilisateur clique sur le bouton
+    backToTopButton.addEventListener("click", function() {
+        document.body.scrollTop = 0; // Pour Safari
+        document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+    });
+</script>
+
+
+    
     <footer>
         <div class="container">
             <p>Portfolio réalisé avec passion et précision.</p>
