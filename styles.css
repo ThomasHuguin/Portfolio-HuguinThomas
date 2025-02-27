@@ -372,6 +372,22 @@ section {
         border-bottom: none;
     }
 
+
+    /* Cacher le menu par défaut */
+    nav#main-nav {
+        display: none;
+    }
+
+
+   /* Styles pour les écrans larges (769px et plus) */
+    @media (min-width: 769px) {
+    /* Afficher le menu en permanence */
+    nav#main-nav {
+        display: block;
+    }
+
+
+
     
     h2 {
         font-size: 1.8em;
