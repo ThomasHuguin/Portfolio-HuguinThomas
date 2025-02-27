@@ -205,4 +205,28 @@ section {
 }
 
 
+/* Style pour le bouton de retour en haut de la page */
+#back-to-top {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Position fixe pour rester visible lors du défilement */
+    bottom: 20px; /* Position en bas de la fenêtre */
+    right: 20px; /* Position à droite de la fenêtre */
+    z-index: 99; /* S'assure que le bouton est au-dessus des autres éléments */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour */
+    background-color: #333; /* Fond gris foncé */
+    color: white; /* Texte blanc */
+    cursor: pointer; /* Curseur en forme de main */
+    padding: 15px; /* Espacement interne */
+    border-radius: 100%; /* Forme ronde */
+    font-size: 18px; /* Taille de la flèche */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+
+#back-to-top:hover {
+    background-color: #555; /* Fond gris plus clair au survol */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
 
