@@ -1,71 +1,109 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 20px; /* Marge de 20px sur tous les côtés */
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+    /* overflow: hidden; Supprimé pour permettre le défilement */
 }
+
+
+h1, h2, h3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 600; /* Titres plus gras */
+}
+
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 60px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Coins arrondis */
+    
 }
 
 header h1 {
+    font-size: 3em;
     margin: 0;
-    font-size: 2.5em;
+    letter-spacing: 2px;
 }
 
 header h2 {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: normal;
+    font-size: 1.8em;
+    margin: 10px 0 0;
+    font-weight: 300;
+    color: #ddd;
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+
+
 }
 
 .containers {
     width: 80%;
     max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .containers:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
+.main-container {
+    overflow: auto; /* Permet le défilement à l'intérieur du conteneur */
+    height: calc(100vh - 40px); /* Hauteur de la fenêtre moins la marge du body */
+    padding: 20px; /* Espacement intérieur pour éviter que le contenu touche les bords */
+}
 
 section {
     padding: 20px 0;
 }
 
 
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+
 h2 {
-    color: #333;
-    border-bottom: 2px solid #333;
+    font-size: 2.2em;
+    border-bottom: 3px solid #333;
     padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 h3 {
-    color: #555;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
 }
+
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+
 
 ul {
     list-style-type: none;
@@ -85,6 +123,7 @@ ul li {
 ul li:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 a {
@@ -97,22 +136,27 @@ a:hover {
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #555);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 30px 0;
+    margin-top: 60px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Coins arrondis */
+    
 }
 
 footer p {
     margin: 0;
+    font-size: 0.9em;
+    color: #ddd;
 }
 
 /* Styles pour les boutons du menu */
 .menu-button {
     background-color: #848484; /* Fond gris foncé */
     color: #fff; /* Texte blanc */
-    padding: 10px 20px; /* Espacement interne */
+    padding: 12px 24px; /* Espacement interne */
     border: none; /* Pas de bordure */
     outline: none; /* Pas de contour */
     cursor: pointer; /* Curseur en forme de main */
@@ -125,6 +169,7 @@ footer p {
 
 .menu-button:hover {
     background-color: #555; /* Fond gris plus clair au survol */
+
 }
 
 .menu-button:focus {
@@ -205,12 +250,15 @@ section {
 }
 
 
+
+
+
 /* Style pour le bouton de retour en haut de la page */
 #back-to-top {
     display: none; /* Caché par défaut */
     position: fixed; /* Position fixe pour rester visible lors du défilement */
     bottom: 20px; /* Position en bas de la fenêtre */
-    right: 20px; /* Position à droite de la fenêtre */
+    right: 35px; /* Position à droite de la fenêtre */
     z-index: 99; /* S'assure que le bouton est au-dessus des autres éléments */
     border: none; /* Pas de bordure */
     outline: none; /* Pas de contour */
@@ -228,5 +276,16 @@ section {
     background-color: #555; /* Fond gris plus clair au survol */
     transform: scale(1.1); /* Effet de zoom au survol */
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
