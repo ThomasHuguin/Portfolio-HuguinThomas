@@ -324,7 +324,7 @@ section {
 
     nav ul {
         flex-direction: column; /* Afficher les boutons en colonne */
-        gap: 10px; /* Espacement entre les boutons */
+        gap: 8px; /* Réduire l'espacement entre les boutons */
         width: 100%; /* Occuper toute la largeur disponible */
         padding: 0; /* Supprimer le padding par défaut */
     }
@@ -339,29 +339,31 @@ section {
         justify-content: center; /* Centrer horizontalement */
         align-items: center; /* Centrer verticalement */
         text-align: center; /* Centrer le texte */
-        padding: 15px 0; /* Ajuster l'espacement vertical */
-        font-size: 1.1em; /* Taille de police légèrement plus grande */
-        border-radius: 8px; /* Coins arrondis */
+        padding: 10px 0; /* Réduire l'espacement vertical */
+        font-size: 0.9em; /* Taille de police plus petite */
+        border-radius: 6px; /* Coins arrondis */
         background-color: #444; /* Fond légèrement plus clair */
         color: white; /* Texte blanc */
         text-decoration: none; /* Supprimer le soulignement */
-        border: 2px solid #555; /* Bordure subtile */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+        border: 1px solid #555; /* Bordure subtile */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
         transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
     }
 
     nav ul li a:hover {
         background-color: #555; /* Effet de survol */
-        transform: translateY(-2px); /* Légère élévation au survol */
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée */
+        transform: translateY(-1px); /* Légère élévation au survol */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée */
     }
 
     nav {
-        padding: 10px 0; /* Réduire l'espacement du menu */
+        padding: 8px 0; /* Réduire l'espacement du menu */
         background-color: #333; /* Fond sombre pour le menu */
-        border-radius: 10px; /* Coins arrondis pour le menu */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour le menu */
+        border-radius: 8px; /* Coins arrondis pour le menu */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
     }
+
+    
     h2 {
         font-size: 1.8em;
     }
