@@ -288,15 +288,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Styles pour les écrans mobiles (moins de 768px) */
 @media (max-width: 768px) {
     body {
@@ -305,26 +296,16 @@ section {
     }
 
     header {
-        padding: 20px 0;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        border-radius: 0;
-        box-shadow: none;
+        padding: 30px 0;
+        border-radius: 10px;
     }
 
     header h1 {
-        font-size: 1.5em;
-        margin: 0;
-        font-weight: 600;
-        letter-spacing: 1px;
+        font-size: 2em;
     }
 
     header h2 {
-        font-size: 1em;
-        margin: 5px 0 0;
-        font-weight: 300;
-        color: #ddd;
+        font-size: 1.2em;
     }
 
     .container, .containers {
@@ -332,13 +313,40 @@ section {
         padding: 20px;
     }
 
-    nav {
+    /* Cacher le menu par défaut */
+        nav#main-nav {
+        display: none;
+        width: 100%;
         background-color: #333;
         padding: 10px 0;
         border-radius: 0;
         box-shadow: none;
     }
 
+    /* Afficher le menu lorsqu'il est activé */
+    nav#main-nav.active {
+        display: block;
+    }
+
+    /* Style du bouton de menu */
+    .menu-toggle {
+        display: block; /* Afficher le bouton */
+        background-color: #444;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1.5em;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px auto; /* Centrer le bouton */
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        background-color: #555;
+    }
+
+    /* Style des liens du menu */
     nav ul {
         flex-direction: column;
         gap: 5px;
@@ -372,7 +380,23 @@ section {
         border-bottom: none;
     }
 
-    
+
+
+
+    .menu-toggle {
+        display: none;
+    }
+
+    nav#main-nav {
+        display: block; /* Toujours afficher le menu sur les écrans larges */
+    }
+
+
+
+
+
+
+
     h2 {
         font-size: 1.8em;
     }
@@ -422,8 +446,3 @@ section {
         padding: 15px 0;
     }
 }
-
-
-
-
-
