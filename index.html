@@ -41,7 +41,8 @@
         <div class="container">
             <h1>Thomas Huguin</h1>
             <h2>Technicien Informatique</h2>
-            <nav>
+            <button id="menu-toggle" class="menu-toggle">&#9776;</button> <!-- Icône de menu -->
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#profil" class="menu-button">Profil</a></li>
                     <li><a href="#competences" class="menu-button">Compétences</a></li>
@@ -211,6 +212,21 @@
         document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
     });
 </script>
+
+
+
+<script>
+    // Récupérer le bouton et le menu
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+
+    // Ajouter un événement de clic sur le bouton
+    menuToggle.addEventListener("click", function () {
+        // Basculer la classe "active" sur le menu
+        mainNav.classList.toggle("active");
+    });
+</script>
+
 
 
     <footer>
