@@ -323,13 +323,31 @@ section {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Afficher les boutons en colonne */
+        gap: 10px; /* Espacement entre les boutons */
+        width: 100%; /* Occuper toute la largeur disponible */
+    }
+
+    nav ul li {
+        width: 100%; /* Chaque bouton occupe toute la largeur */
     }
 
     nav ul li a {
-        font-size: 1em;
-        padding: 8px 12px;
+        display: block; /* Afficher les liens en bloc pour occuper toute la largeur */
+        text-align: center; /* Centrer le texte */
+        padding: 12px 0; /* Ajuster l'espacement vertical */
+        font-size: 1em; /* Taille de police adaptée */
+        border-radius: 5px; /* Coins arrondis */
+        background-color: #444; /* Fond légèrement plus clair */
+        transition: background-color 0.3s ease; /* Transition fluide */
+    }
+
+    nav ul li a:hover {
+        background-color: #555; /* Effet de survol */
+    }
+
+    nav {
+        padding: 10px 0; /* Réduire l'espacement du menu */
     }
 
     h2 {
