@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+
+
+
     <title>Portfolio de Thomas Huguin</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -37,22 +47,48 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="header" id="header">
         <div class="container">
+	<section class="home1">
+	
+
             <h1>Thomas Huguin</h1>
             <h2>Technicien Informatique</h2>
+
+        </section>
             <nav id="main-nav">
-                <ul>
-                    <li><a href="#profil" class="menu-button">Profil</a></li>
-                    <li><a href="#competences" class="menu-button">Compétences</a></li>
-                    <li><a href="#experiences" class="menu-button">Expériences</a></li>
-                    <li><a href="#formations" class="menu-button">Formations</a></li>
-                    <li><a href="#loisirs" class="menu-button">Loisirs</a></li>
-                    <li><a href="#contact" class="menu-button">Contact</a></li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#profil" class="nav__link">Profil</a></li>
+                    <li><a href="#competences" class="nav__link">Compétences</a></li>
+                    <li><a href="#experiences" class="nav__link">Expériences</a></li>
+                    <li><a href="#formations" class="nav__link">Formations</a></li>
+                    <li><a href="#loisirs" class="nav__link">Loisirs</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
+
+                <!-- close button-->
+                <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+
+            <!--Toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-2-line"></i>
+            </div>
+
+
             </nav>
         </div>
     </header>
+
+
+<!--==================== MAIN ====================-->
+      <main class="main">
+
+
+
     <section id="profil" class="containers">
         <h2>Profil Personnel</h2>
         <p>
@@ -213,11 +249,37 @@
 </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer>
         <div class="container">
             <p>Portfolio réalisé avec passion et précision.</p>
             <p>&copy; 2025 - Thomas Huguin - Technicien Informatique</p>
         </div>
     </footer>
+
+
+
+    <!--=============== GSAP ===============-->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
 </body>
 </html>
