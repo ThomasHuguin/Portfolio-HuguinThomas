@@ -480,6 +480,21 @@ section {
 }
 
 
+.nav__link i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2em; /* Taille de l'icône */
+    vertical-align: middle; /* Alignement vertical */
+}
+
+/* Pour les écrans mobiles */
+@media (max-width: 1150px) {
+    .nav__link i {
+        font-size: 1em; /* Taille de l'icône réduite pour les mobiles */
+    }
+}
+
+
+
 
 /* couleur neon bouton */
 /*.nav__link:hover{
