@@ -305,7 +305,7 @@ section {
         background-color: #333;
         color: #fff;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 0;
         box-shadow: none;
     }
 
@@ -474,35 +474,10 @@ section {
 
 }
 
-.nav__link {
-    display: flex;
-    flex-direction: column; /* Affiche les éléments en colonne */
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    text-align: center; /* Centre le texte */
-    gap: 5px; /* Espace entre l'icône et le texte */
+.nav__link{
+  color: var()var(--black-color);
+  font-weight: var(--font-semi-bold);
 }
-
-.nav__link i {
-    font-size: 1.5em; /* Taille de l'icône */
-}
-
-.nav__link span {
-    font-size: 0.9em; /* Taille du texte */
-}
-
-/* Pour les écrans mobiles */
-@media (max-width: 1150px) {
-    .nav__link i {
-        font-size: 1.2em; /* Taille de l'icône réduite pour les mobiles */
-    }
-
-    .nav__link span {
-        font-size: 0.8em; /* Taille du texte réduite pour les mobiles */
-    }
-}
-
-
 
 
 
