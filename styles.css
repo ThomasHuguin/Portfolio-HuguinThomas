@@ -293,7 +293,7 @@ section {
 
 
 
-/* Styles pour les écrans mobiles (moins de 768px) */
+/* Styles pour les écrans mobiles (moins de 1150px) */
 @media (max-width: 1150px) {
     body {
         margin: 10px;
@@ -372,7 +372,7 @@ section {
 
 
 
-   /* Styles pour les écrans larges (769px et plus) */
+   /* Styles pour les écrans larges (1151px et plus) */
     @media (min-width: 1151px) {
     /* Afficher le menu en permanence */
     nav#main-nav {
@@ -453,7 +453,7 @@ section {
 @media screen and (max-width: 1150px){
   .nav__menu{
     position: fixed;
-    top: -120%;
+    top: -150%;
     left: 0;
     background-color: hsla(0, 0%, 53%, 0.4);
     backdrop-filter: blur(16px);
