@@ -283,6 +283,9 @@ section {
 
 
 
+
+
+
 /* Mode Sombre et clair */
 body.dark-mode {
     background-color: #1a1a1a; /* Fond sombre */
@@ -323,9 +326,13 @@ body.dark-mode #contact ul li {
 }
 
 
+
 body.dark-mode #contact strong {
     color: #ffffff; /* Liens en bleu clair pour une meilleure visibilité */
 }
+
+
+
 
 
 body.dark-mode a {
@@ -376,15 +383,37 @@ header {
     position: relative; /* Permet de positionner l'icône en haut à droite */
 }
 
+@media (min-width: 1150px) {
+.theme-toggle:hover::after {
+    content: var(--tooltip-text, "Mode Sombre"); /* Utiliser la variable CSS */
+    position: absolute;
+    top: 50%;
+    right: 40px; /* Position par rapport à l'icône */
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    background-color: #333; /* Fond du texte */
+    color: #fff; /* Couleur du texte */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Empêcher le texte de se casser */
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.3s ease;
+}
 
+.theme-toggle:hover::after {
+    opacity: 1; /* Afficher le texte au survol */
+}
 
+/* Styles pour le mode sombre */
+body.dark-mode .theme-toggle {
+    color: #e0e0e0; /* Couleur de l'icône en mode sombre */
+}
 
-
-
-
-
-
-
+body.dark-mode .theme-toggle:hover::after {
+    background-color: #555; /* Fond du texte en mode sombre */
+    color: #e0e0e0; /* Couleur du texte en mode sombre */
+}
+}
 
 
 
@@ -433,6 +462,17 @@ header {
         transform: translateY(-20px);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
