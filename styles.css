@@ -369,6 +369,8 @@ section {
     }
 
     
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
     top: -120%;
@@ -409,7 +411,7 @@ section {
   .nav__link span {
     font-size: 0.8em;
   }
-
+}
 
 /* Show menu */
 .show-menu {
