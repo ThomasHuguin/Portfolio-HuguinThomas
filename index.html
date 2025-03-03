@@ -69,16 +69,38 @@
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('i');
 
+// Fonction pour mettre à jour le texte du tooltip
+const updateTooltipText = () => {
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const tooltipText = isDarkMode ? "Mode Clair" : "Mode Sombre";
+    themeToggle.style.setProperty('--tooltip-text', `"${tooltipText}"`);
+};
+
+// Vérifier si le mode sombre est déjà activé
+if (localStorage.getItem('dark-mode')) {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.remove('ri-moon-line');
+    themeIcon.classList.add('ri-sun-line');
+    updateTooltipText(); // Mettre à jour le texte du tooltip
+}
+
+// Gestion du clic sur l'icône
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
         themeIcon.classList.remove('ri-moon-line');
-        themeIcon.classList.add('ri-sun-line'); // Icône de soleil pour le mode clair
+        themeIcon.classList.add('ri-sun-line');
+        localStorage.setItem('dark-mode', 'enabled'); // Enregistrer la préférence
     } else {
         themeIcon.classList.remove('ri-sun-line');
-        themeIcon.classList.add('ri-moon-line'); // Icône de lune pour le mode sombre
+        themeIcon.classList.add('ri-moon-line');
+        localStorage.removeItem('dark-mode'); // Supprimer la préférence
     }
+    updateTooltipText(); // Mettre à jour le texte du tooltip
 });
+
+// Mettre à jour le texte du tooltip au survol
+themeToggle.addEventListener('mouseenter', updateTooltipText);
 </script>
 
 
