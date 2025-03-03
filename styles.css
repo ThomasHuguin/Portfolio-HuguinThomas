@@ -305,7 +305,23 @@ body.dark-mode ul li {
     background-color: #333; /* Fond des listes en mode sombre */
     border-left: 5px solid #555; /* Bordure plus claire */
     color: #e0e0e0; /* Texte clair */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
 }
+
+
+
+body.dark-mode #profil ul li,
+body.dark-mode #competences ul li,
+body.dark-mode #experiences ul li,
+body.dark-mode #formations ul li,
+body.dark-mode #loisirs ul li,
+body.dark-mode #contact ul li {
+    background-color: #333; /* Fond plus sombre */
+    color: #e0e0e0; /* Texte plus clair */
+    border-left: 5px solid #555; /* Bordure plus claire */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
 
 body.dark-mode a {
     color: #4dabf7; /* Liens en bleu clair pour une meilleure visibilité */
