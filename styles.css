@@ -290,6 +290,14 @@ section {
 
 
 
+/* Styles pour les écrans larges (500px et plus) */
+@media (max-width: 500px) {
+
+    .container, .containers {
+        width: 83%;
+        padding: 20px;
+    }
+}
 
 
 
@@ -324,7 +332,7 @@ section {
     }
 
     .container, .containers {
-        width: 83%;
+        width: 90%;
         padding: 20px;
     }
 
