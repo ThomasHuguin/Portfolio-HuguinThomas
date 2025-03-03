@@ -358,7 +358,7 @@ body.dark-mode .theme-toggle:hover {
 
 .theme-toggle {
     position: absolute;
-    top: 20px;
+    top: 5px;
     right: 20px;
     cursor: pointer;
     font-size: 1.5em;
