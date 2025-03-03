@@ -290,14 +290,6 @@ section {
 
 
 
-/* Styles pour les écrans larges (500px et plus) */
-@media (max-width: 500px) {
-
-    .container, .containers {
-        width: 83%;
-        padding: 20px;
-    }
-}
 
 
 
@@ -380,7 +372,23 @@ section {
 
 
 
-   /* Styles pour les écrans larges (1151px et plus) */
+   /* Styles pour les écrans larges (500px et plus) */
+    @media (max-width: 500px) {
+
+    .container, .containers {
+        width: 83%;
+        padding: 20px;
+    }
+
+
+}
+
+
+
+
+
+
+   /* Styles pour les écrans larges (1151x et plus) */
     @media (min-width: 1151px) {
     /* Afficher le menu en permanence */
     nav#main-nav {
