@@ -368,6 +368,61 @@ section {
         border-bottom: none;
     }
 
+    
+  .nav__menu {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    background-color: hsla(0, 0%, 53%, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: 100%;
+    height: 80%; /* Hauteur maximale du menu */
+    max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la vue */
+    padding-block: 5rem 4rem;
+    box-shadow: 0 4px 24px hsla(353, 90%, 4%, .2);
+    transition: top .4s;
+    overflow-y: auto; /* Active le défilement vertical si le contenu dépasse la hauteur */
+  }
+
+  .nav__list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-bottom: 2rem; /* Ajoute un espace en bas pour éviter que le dernier élément ne soit coupé */
+  }
+
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .nav__link i {
+    font-size: 1.2em;
+  }
+
+  .nav__link span {
+    font-size: 0.8em;
+  }
+
+
+/* Show menu */
+.show-menu {
+  top: 0;
+}
+
+
+
+
+
+
+
+    
 
 
 
