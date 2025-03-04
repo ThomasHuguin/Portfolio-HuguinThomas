@@ -16,6 +16,12 @@
       <title>Carte de Profil - Huguin Thomas</title>
    </head>
    <body>
+
+   <!-- Écran de chargement -->
+   <div class="loader">
+      <div class="loader__spinner"></div>
+   </div>
+      
       <div class="container">
          <article class="card__article" id="profile-card">
             <div class="card__profile">
@@ -167,6 +173,18 @@
 
 
 
+
+
+<!--=============== Page chargement ===============-->
+   <script>
+   // Sélectionnez l'élément de l'écran de chargement
+   const loader = document.querySelector('.loader');
+
+   // Masquer l'écran de chargement une fois que la page est chargée
+   window.addEventListener('load', () => {
+      loader.classList.add('loader--hidden');
+   });
+   </script>
       
 
    </body>
