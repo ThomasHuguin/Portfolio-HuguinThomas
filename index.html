@@ -150,6 +150,24 @@
    });
    </script>
 
+   <script>
+   document.querySelector('.card__profile-img').addEventListener('click', function() {
+   const tooltip = document.querySelector('.card__tooltip');
+
+   // Vérifie si la fenêtre est visible (opacité > 0)
+   if (tooltip.style.opacity === '1') {
+       // Ferme la fenêtre et actualise la page
+       tooltip.style.opacity = '0';
+       tooltip.style.pointerEvents = 'none';
+       location.reload(); // Actualise la page
+   }
+   });
+   </script>
+
+
+
+
+      
 
    </body>
 </html>
