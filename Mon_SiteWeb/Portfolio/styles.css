@@ -1119,3 +1119,35 @@ position: center;
 }
 
 }
+
+
+
+/* Style de base pour les éléments de liste */
+ul li {
+  position: relative; /* Permet de positionner le tooltip par rapport à l'élément */
+  cursor: pointer; /* Change le curseur en main pour indiquer que c'est interactif */
+}
+
+/* Style du tooltip */
+.tooltip {
+  visibility: hidden; /* Cache le tooltip par défaut */
+  width: 200px; /* Largeur du tooltip */
+  background-color: #333; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  text-align: center;
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px 10px; /* Espacement interne */
+  position: absolute; /* Position absolue pour le positionner par rapport à l'élément parent */
+  z-index: 1; /* Assure que le tooltip est au-dessus des autres éléments */
+  bottom: 125%; /* Positionne le tooltip au-dessus de l'élément */
+  left: 50%; /* Centre le tooltip horizontalement */
+  transform: translateX(-50%); /* Centre le tooltip */
+  opacity: 0; /* Rend le tooltip invisible par défaut */
+  transition: opacity 0.3s ease; /* Transition fluide */
+}
+
+/* Afficher le tooltip au survol */
+ul li:hover .tooltip {
+  visibility: visible; /* Affiche le tooltip */
+  opacity: 1; /* Rend le tooltip visible */
+}
