@@ -1154,3 +1154,9 @@ ul li:hover .tooltip {
   visibility: visible; /* Affiche le tooltip */
   opacity: 1; /* Rend le tooltip visible */
 }
+
+/* Mode sombre pour les tooltips */
+body.dark-mode .tooltip {
+  background-color: #555; /* Fond plus clair en mode sombre */
+  color: #e0e0e0; /* Texte plus clair */
+}
