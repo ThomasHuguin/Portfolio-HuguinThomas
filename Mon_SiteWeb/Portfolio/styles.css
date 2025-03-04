@@ -1,0 +1,1121 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.8;
+  margin: 20px; /* Marge de 20px sur tous les côtés */
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 15px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+  /* overflow: hidden; Supprimé pour permettre le défilement */
+}
+
+
+
+
+h1, h2, h3 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600; /* Titres plus gras */
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Coins arrondis */
+  
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  letter-spacing: 2px;
+
+}
+
+header h2 {
+  font-size: 1.8em;
+  margin: 10px 0 0;
+  font-weight: 300;
+  color: #ddd;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+
+}
+
+.containers {
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containers:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.main-container {
+  overflow: auto; /* Permet le défilement à l'intérieur du conteneur */
+  height: calc(100vh - 40px); /* Hauteur de la fenêtre moins la marge du body */
+  padding: 20px; /* Espacement intérieur pour éviter que le contenu touche les bords */
+}
+
+section {
+  padding: 20px 0;
+}
+
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+
+h2 {
+  font-size: 2.2em;
+  border-bottom: 3px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+
+p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+}
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background: ;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: linear-gradient(135deg, #333, #555);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Coins arrondis */
+  
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+/* Styles pour les boutons du menu */
+.menu-button {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 25px; /* Boutons arrondis */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.menu-button:focus {
+  outline: none; /* Supprimer le contour au focus */
+}
+
+* Ajout d'une animation pour les sections */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Amélioration de la section contact */
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact ul li {
+  background: #f9f9f9;
+  border-left: 5px solid #555;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact ul li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Amélioration de la section compétences */
+#competences ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+#competences ul li {
+  background: #f9f9f9;
+  border-left: 5px solid #555;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section expériences */
+#experiences ul li {
+  background: #f9f9f9;
+  border-left: 5px solid #555;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section formations */
+#formations ul li {
+  background: #f9f9f9;
+  border-left: 5px solid #555;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section loisirs */
+#loisirs ul li {
+  background: #f9f9f9;
+  border-left: 5px solid #555;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Style pour le bouton de retour en haut de la page */
+#back-to-top {
+  display: none; /* Caché par défaut */
+  position: fixed; /* Position fixe pour rester visible lors du défilement */
+  bottom: 20px; /* Position en bas de la fenêtre */
+  right: 35px; /* Position à droite de la fenêtre */
+  z-index: 99; /* S'assure que le bouton est au-dessus des autres éléments */
+  border: none; /* Pas de bordure */
+  outline: none; /* Pas de contour */
+  background-color: #333; /* Fond gris foncé */
+  color: white; /* Texte blanc */
+  cursor: pointer; /* Curseur en forme de main */
+  padding: 15px; /* Espacement interne */
+  border-radius: 100%; /* Forme ronde */
+  font-size: 18px; /* Taille de la flèche */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+
+#back-to-top:hover {
+  background-color: #555; /* Fond gris plus clair au survol */
+  transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+
+#back-to-top svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+/* Mode Sombre et clair */
+body.dark-mode {
+  background-color: #1a1a1a; /* Fond sombre */
+  color: #e0e0e0; /* Texte clair pour une bonne lisibilité */
+}
+
+body.dark-mode .containers {
+  background-color: #2a2a2a; /* Fond des sections en mode sombre */
+  color: #e0e0e0; /* Texte clair */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff; /* Titres en blanc pour plus de contraste */
+}
+
+body.dark-mode ul li {
+  background-color: #333; /* Fond des listes en mode sombre */
+  border-left: 5px solid #555; /* Bordure plus claire */
+  color: #e0e0e0; /* Texte clair */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+
+
+body.dark-mode #profil ul li,
+body.dark-mode #competences ul li,
+body.dark-mode #experiences ul li,
+body.dark-mode #formations ul li,
+body.dark-mode #loisirs ul li,
+body.dark-mode #contact ul li {
+  background-color: #333; /* Fond plus sombre */
+  color: #e0e0e0; /* Texte plus clair */
+  border-left: 5px solid #555; /* Bordure plus claire */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+
+
+body.dark-mode #contact strong {
+  color: #ffffff; /* Liens en bleu clair pour une meilleure visibilité */
+}
+
+
+
+
+
+body.dark-mode a {
+  color: #4dabf7; /* Liens en bleu clair pour une meilleure visibilité */
+}
+
+body.dark-mode a:hover {
+  color: #74c0fc; /* Liens au survol en bleu plus clair */
+}
+
+body.dark-mode footer {
+  background: linear-gradient(135deg, #2a2a2a, #444); /* Fond du footer en mode sombre */
+  color: #e0e0e0; /* Texte clair */
+}
+
+body.dark-mode .theme-toggle {
+  color: #e0e0e0; /* Icône du bouton mode sombre en clair */
+}
+
+body.dark-mode .theme-toggle:hover {
+  color: #ffffff; /* Icône au survol en blanc */
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #fff; /* Couleur de l'icône en mode clair */
+  transition: color 0.3s ease;
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+/* Style pour le mode sombre */
+body.dark-mode .theme-toggle {
+  color: #f9f9f9; /* Couleur de l'icône en mode sombre */
+}
+
+/* Animation de rotation pour l'icône */
+.theme-toggle:hover i {
+  transform: rotate(180deg);
+}
+header {
+  position: relative; /* Permet de positionner l'icône en haut à droite */
+}
+
+@media (min-width: 1150px) {
+.theme-toggle:hover::after {
+  content: var(--tooltip-text, "Mode Sombre"); /* Utiliser la variable CSS */
+  position: absolute;
+  top: 50%;
+  right: 40px; /* Position par rapport à l'icône */
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  background-color: #333; /* Fond du texte */
+  color: #fff; /* Couleur du texte */
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap; /* Empêcher le texte de se casser */
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover::after {
+  opacity: 1; /* Afficher le texte au survol */
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode .theme-toggle {
+  color: #e0e0e0; /* Couleur de l'icône en mode sombre */
+}
+
+body.dark-mode .theme-toggle:hover::after {
+  background-color: #555; /* Fond du texte en mode sombre */
+  color: #e0e0e0; /* Couleur du texte en mode sombre */
+}
+}
+
+
+
+
+
+/* animation chargement */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #333; /* Couleur des points */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s; /* Délai pour le deuxième point */
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s; /* Délai pour le troisième point */
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles pour les écrans mobiles (moins de 1150px) */
+@media (max-width: 1150px) {
+  body {
+      margin: 10px;
+      border-radius: 10px;
+  }
+
+  header {
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: none;
+  }
+
+  header h1 {
+      font-size: 1.5em;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+  }
+
+  header h2 {
+      font-size: 1em;
+      margin: 5px 0 0;
+      font-weight: 300;
+      color: #ddd;
+  }
+
+  .container, .containers {
+      width: 90%;
+      padding: 20px;
+  }
+
+  nav {
+      background-color: #333;
+      padding: 10px 0;
+      border-radius: 0;
+      box-shadow: none;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      padding: 0;
+  }
+
+  nav ul li {
+      width: 100%;
+      margin: 0;
+  }
+
+  nav ul li a {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
+      color: #fff;
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom: 1px solid #555;
+      transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+      background-color: #444;
+  }
+
+  /* Supprimer le dernier séparateur */
+  nav ul li:last-child a {
+      border-bottom: none;
+  }
+
+
+
+
+
+
+
+
+
+ /* Styles pour les écrans (500px et plus) */
+  @media (max-width: 500px) {
+
+  .container, .containers {
+      width: 83%;
+      padding: 20px;
+  }
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 500px) {
+.nav__menu {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  background-color: hsla(0, 0%, 53%, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+  height: 80%; /* Hauteur maximale du menu */
+  max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la vue */
+  padding-block: 5rem 4rem;
+  box-shadow: 0 4px 24px hsla(353, 90%, 4%, .2);
+  transition: top .4s;
+  overflow-y: auto; /* Active le défilement vertical si le contenu dépasse la hauteur */
+}
+
+.nav__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-bottom: 2rem; /* Ajoute un espace en bas pour éviter que le dernier élément ne soit coupé */
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.nav__link i {
+  font-size: 1.2em;
+}
+
+.nav__link span {
+  font-size: 0.8em;
+}
+}
+
+/* Show menu */
+.show-menu {
+top: 0;
+}
+
+}
+
+
+
+
+
+
+
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+.nav__menu {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  background-color: hsla(0, 0%, 53%, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+  height: 80%; /* Hauteur maximale du menu */
+  max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la vue */
+  padding-block: 5rem 4rem;
+  box-shadow: 0 4px 24px hsla(353, 90%, 4%, .2);
+  transition: top .4s;
+  overflow-y: auto; /* Active le défilement vertical si le contenu dépasse la hauteur */
+}
+
+.nav__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-bottom: 2rem; /* Ajoute un espace en bas pour éviter que le dernier élément ne soit coupé */
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.nav__link i {
+  font-size: 1.2em;
+}
+
+.nav__link span {
+  font-size: 0.8em;
+}
+}
+
+/* Show menu */
+.show-menu {
+top: 0;
+}
+
+
+
+ /* Styles pour les écrans larges (1151x et plus) */
+  @media (min-width: 1151px) {
+  /* Afficher le menu en permanence */
+  nav#main-nav {
+      display: block;
+  }
+}
+
+
+
+
+
+  
+  h2 {
+      font-size: 1.8em;
+  }
+
+  h3 {
+      font-size: 1.4em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+
+  ul li {
+      padding: 10px;
+  }
+
+  footer {
+      padding: 20px 0;
+      border-radius: 10px;
+  }
+
+  #back-to-top {
+      right: 20px;
+      bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  #competences ul {
+      grid-template-columns: 1fr;
+  }
+
+  section {
+      animation: none;
+  }
+
+  .containers:hover {
+      transform: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .containers {
+      margin: 20px auto;
+  }
+
+  section {
+      padding: 15px 0;
+  }
+}
+
+
+
+
+
+
+
+
+.nav__toogle,
+.nav__close{
+display: flex;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+/* Navigation for mobile devices */
+
+@media screen and (max-width: 1150px){
+.nav__menu{
+  position: fixed;
+  top: -150%;
+  left: 0;
+  background-color: hsla(0, 0%, 53%, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+  padding-block: 5rem 4rem;
+  box-shadow: 0 4px 24ps hsla(353, 90%, 4%, .2);
+  transition: top .4s;
+}
+}
+
+
+.nav__list{
+text-align: center;
+display: flex;
+flex-direction: column;
+row-gap: 2rem;
+
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement */
+  text-align: center; /* Centre le texte */
+  gap: 5px; /* Espace entre l'icône et le texte */
+}
+
+.nav__link i {
+  font-size: 1.5em; /* Taille de l'icône */
+}
+
+.nav__link span {
+  font-size: 0.9em; /* Taille du texte */
+}
+
+/* Pour les écrans mobiles */
+@media (max-width: 1150px) {
+  .nav__link i {
+      font-size: 1.2em; /* Taille de l'icône réduite pour les mobiles */
+  }
+
+  .nav__link span {
+      font-size: 0.8em; /* Taille du texte réduite pour les mobiles */
+  }
+}
+
+
+
+/* couleur neon bouton */
+/*.nav__link:hover{
+box-shadow: 0 16px 48px hsla(353, 90%, 56%, .4);
+}*/
+
+
+.nav__close{
+position: absolute;
+top: 1rem;
+right: 1.5rem;
+}
+
+/* Show menu */
+
+.show-menu{
+top: 0;
+}
+
+
+
+
+
+
+.home1{
+position: relative;
+text-align: center;
+z-index: var(--z-tooltip);
+font-size: var(--biggest-font-size);
+margin-bottom: 1rem;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+@media screen and (min-width: 320px){
+.container{
+  margin-inline: 1rem;
+}
+
+.home__title{
+  font-size: 2rem;
+}
+
+}
+
+
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+
+@media screen and (min-width: 350px) and (max-heigth: 680px){
+.home__container{
+  height: 700px;
+}
+
+}
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+
+
+
+/* For medium devices */
+
+@media screen and (min-width: 576px){
+.home__data{
+  max-width: 380px;
+  margin: auto;
+}
+
+.home__images img{
+  width: initial;
+  right: 0.;
+}
+
+}
+
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+
+
+
+/* For large devices */
+
+@media screen and (min-width: 1150px){
+.container{
+  margin-inline: auto;
+}
+
+.nav{
+  height: calc(var(--header-height) + 2rem);
+}
+
+
+.nav__toggle,
+.nav__close{
+  display: none;
+}
+
+.nav__list{
+  flex-direction: row;
+  column-gap: 4rem;
+}
+
+
+    .nav__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px; /* Largeur fixe pour un bouton rond */
+      height: 50px; /* Hauteur fixe pour un bouton rond */
+      border-radius: 50%; /* Rend le bouton rond */
+      background-color: #333; /* Couleur de fond */
+      color: white; /* Couleur du texte */
+      text-decoration: none; /* Supprime le soulignement */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      position: relative; /* Permet de positionner la légende */
+  }
+
+  .nav__link:hover {
+      background-color: #555; /* Changement de couleur au survol */
+      transform: scale(1.1); /* Effet de zoom au survol */
+  }
+
+  .nav__link i {
+      font-size: 1.5em; /* Taille de l'icône */
+  }
+
+  .nav__link span {
+      display: none; /* Cache le texte pour ne garder que l'icône */
+  }
+
+  /* Ajout de la légende au survol */
+  .nav__link::after {
+      content: attr(data-tooltip); /* Récupère le texte de l'attribut data-tooltip */
+      position: absolute;
+      bottom: -25px; /* Positionne la légende sous l'icône */
+      left: 50%; /* Centre la légende horizontalement */
+      transform: translateX(-50%); /* Centre la légende */
+      background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+      color: white; /* Couleur du texte */
+      padding: 5px 10px; /* Espacement interne */
+      border-radius: 5px; /* Coins arrondis */
+      font-size: 0.9em; /* Taille du texte */
+      white-space: nowrap; /* Empêche le texte de passer à la ligne */
+      opacity: 0; /* Cache la légende par défaut */
+      transition: opacity 0.3s ease; /* Transition fluide */
+      pointer-events: none; /* Empêche la légende de bloquer les clics */
+  }
+
+  .nav__link:hover::after {
+      opacity: 1; /* Affiche la légende au survol */
+  }
+
+
+
+
+.home__container{
+  height: 960px;
+}
+
+
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+
+.home__data{
+  max-width: 610px;
+  text-align: initial;
+  margin: 0;
+}
+
+.home__description{
+  padding-right: 8rem;
+  margin-bottom: 3rem;
+}
+
+.home__lantern-1,
+.home__lantern-2{
+  width: 80px;
+}
+
+.home__lantern-1{
+  top: 6.5rem;
+  right: 4rem;
+
+}
+
+.home__lantern-2{
+  left: initial;
+  right: 14rem;
+  bottom: -3.5;
+}
+
+
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(353, 12%, 10%);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(353, 12%, 25%);
+}
+
+}
+
+
+
+/* For 2K resolutions (2048 x 1152) */
+
+
+@media screen and (min-width: 2048px) and (min-height: 1100px){
+.container{
+  max-width: 1300px;
+}
+
+.home__container{
+  height: 100vh;
+  display: grid;
+}
+
+.home__data{
+  align-self: center;
+}
+
+
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+
+}
+
+/* For taller devices */
+
+@media screen and (max-width: 1150px) and (min-heigth: 900px){
+.home__container{
+  display: grid;
+}
+
+.home__data{
+  align-self: center;
+}
+
+.home1{
+text-align: center;
+object-position: center;
+position: center;
+
+}
+
+}

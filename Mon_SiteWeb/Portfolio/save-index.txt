@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Thomas Huguin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Thomas Huguin</h1>
+            <h2>Technicien Informatique</h2>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#profil" class="menu-button">Profil</a></li>
+                    <li><a href="#competences" class="menu-button">Compétences</a></li>
+                    <li><a href="#experiences" class="menu-button">Expériences</a></li>
+                    <li><a href="#formations" class="menu-button">Formations</a></li>
+                    <li><a href="#loisirs" class="menu-button">Loisirs</a></li>
+                    <li><a href="#contact" class="menu-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="profil" class="containers">
+        <h2>Profil Personnel</h2>
+        <p>
+            Je suis Thomas Huguin, un technicien informatique passionné par les technologies et les systèmes d'information. Diplômé d'un BTS SIO option SISR, je suis à la recherche d'opportunités pour mettre en pratique mes compétences techniques et mon savoir-faire dans le domaine de l'informatique. Doté d'un esprit curieux et d'une grande autonomie, je suis prêt à relever de nouveaux défis professionnels.
+        </p>
+        <ul>
+            <li><strong>Date de naissance</strong> : 15/06/2001</li>
+            <li><strong>Nationalité</strong> : Française</li>
+            <li><strong>Permis B et véhicule personnel</strong> : Mobilité assurée</li>
+        </ul>
+    </section>
+
+    <section id="competences" class="containers">
+        <h2>Compétences Techniques</h2>
+        <h3>Certifications</h3>
+        <ul>
+            <li>Certification PIX (22/02/2022) - Code vérification : P-4WQPT987</li>
+        </ul>
+
+        <h3>Systèmes d'exploitation</h3>
+        <ul>
+            <li>Windows (client et serveur)</li>
+            <li>Linux (bases)</li>
+        </ul>
+
+        <h3>Logiciels et outils</h3>
+        <ul>
+            <li>Suite Microsoft Office (Word, Excel, PowerPoint)</li>
+            <li>Audacity (traitement du son)</li>
+            <li>Photoshop (montage photo)</li>
+            <li>Filmora (montage vidéo)</li>
+            <li>Virtualisation (VirtualBox, Hyper-V)</li>
+        </ul>
+
+        <h3>Administration et gestion</h3>
+        <ul>
+            <li>Supervision (Centreon)</li>
+            <li>Gestion de parc informatique (GLPI)</li>
+            <li>Annuaire (LDAP, Active Directory)</li>
+            <li>Installation de services (Apache, MySQL, FTP, GLPI, DokuWiki)</li>
+            <li>Gestion de VLAN</li>
+            <li>Déploiement de GPO</li>
+            <li>Mise en place de scripts</li>
+            <li>Gestion des incidents (OSTicket, GLPI)</li>
+            <li>Serveur d'impression</li>
+        </ul>
+
+        <h3>Développement web</h3>
+        <ul>
+            <li>Création de sites Internet (WordPress)</li>
+        </ul>
+
+        <h3>Support utilisateur</h3>
+        <ul>
+            <li>Installation et déploiement de postes de travail</li>
+            <li>Assistance et conseils aux utilisateurs</li>
+            <li>Rédaction de documentations techniques</li>
+        </ul>
+    </section>
+
+    <section id="experiences" class="containers">
+        <h2>Expériences Professionnelles</h2>
+
+        <h3>Technicien Informatique</h3>
+        <p><strong>Lycée Raymond Poincaré - Bar-le-Duc</strong></p>
+        <p><em>Janvier 2023 - Aujourd'hui</em></p>
+        <ul>
+            <li>Maintenance et déploiement du parc informatique.</li>
+            <li>Assistance aux utilisateurs.</li>
+        </ul>
+
+        <h3>Stages en Informatique</h3>
+        <p><strong>ADAPEI Vassinourt - Service Informatique</strong></p>
+        <p><em>Janvier 2022 - Février 2022</em></p>
+        <p><em>Mai 2021 - Juillet 2021</em></p>
+        <ul>
+            <li>Participation à la gestion du parc informatique et à la résolution d'incidents.</li>
+        </ul>
+
+        <h3>Agent Polyvalent</h3>
+        <p><strong>Auchan Bar-le-Duc</strong></p>
+        <p><em>Juillet 2020 - Décembre 2022</em></p>
+        <ul>
+            <li>Gestion de l'accueil et des hôtes de caisse.</li>
+            <li>Responsable de la fonction de chef de zone.</li>
+        </ul>
+
+        <h3>Vacataire</h3>
+        <p><strong>Voies Navigables de France (VNF) - Bar-le-Duc</strong></p>
+        <p><em>Août 2020</em></p>
+        <ul>
+            <li>Missions ponctuelles dans le cadre de contrats temporaires.</li>
+        </ul>
+    </section>
+
+    <section id="formations" class="containers">
+        <h2>Formations</h2>
+
+        <h3>BTS SIO option SISR</h3>
+        <p><strong>Lycée Raymond Poincaré - Bar-le-Duc</strong></p>
+        <p><em>2022</em></p>
+
+        <h3>BAC STI2D</h3>
+        <p><strong>Lycée Raymond Poincaré - Bar-le-Duc</strong></p>
+        <p><em>2020</em></p>
+        <ul>
+            <li>Mention : Assez Bien</li>
+        </ul>
+
+        <h3>Brevet des Collèges</h3>
+        <p><strong>Collège Les Avrils - St Mihiel</strong></p>
+        <p><em>2016</em></p>
+        <ul>
+            <li>Mention : Bien</li>
+        </ul>
+    </section>
+
+    <section id="loisirs" class="containers">
+        <h2>Centres d'Intérêt</h2>
+        <ul>
+            <li><strong>Sport</strong> : Passionné par les activités physiques et le dépassement de soi.</li>
+            <li><strong>Informatique et Technologie</strong> : Veille technologique constante, exploration de nouveaux outils et logiciels.</li>
+            <li><strong>Cuisine</strong> : Amateur de cuisine créative et de découvertes culinaires.</li>
+            <li><strong>Voyages</strong> : Curieux de découvrir de nouvelles cultures et paysages.</li>
+            <li><strong>Aquariophilie et plantes</strong> : Passionné par l'entretien des aquariums et la botanique.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="containers">
+        <h2>Coordonnées</h2>
+        <ul>
+            <li><strong>Email</strong> : <a href="mailto:thomas.huguin2001@gmail.com">thomas.huguin2001@gmail.com</a></li>
+            <li><strong>Téléphone</strong> : 07 87 33 57 07</li>
+            <li><strong>Adresse</strong> : 2 Impasse Varinot, 55000 Bar-le-Duc</li>
+        </ul>
+    </section>
+<!-- Bouton de retour en haut de la page -->
+<button id="back-to-top" title="Retour en haut">&#8679;</button>
+
+<script>
+    // Récupérer le bouton
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Afficher le bouton lorsque l'utilisateur fait défiler la page vers le bas
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Faire défiler la page vers le haut lorsque l'utilisateur clique sur le bouton
+    backToTopButton.addEventListener("click", function() {
+        document.body.scrollTop = 0; // Pour Safari
+        document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+    });
+</script>
+
+
+    <footer>
+        <div class="container">
+            <p>Portfolio réalisé avec passion et précision.</p>
+            <p>&copy; 2025 - Thomas Huguin - Technicien Informatique</p>
+        </div>
+    </footer>
+</body>
+</html>

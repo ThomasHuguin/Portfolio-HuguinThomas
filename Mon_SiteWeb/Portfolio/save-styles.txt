@@ -1,0 +1,440 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 20px; /* Marge de 20px sur tous les côtés */
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+    /* overflow: hidden; Supprimé pour permettre le défilement */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 600; /* Titres plus gras */
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Coins arrondis */
+    
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: 1.8em;
+    margin: 10px 0 0;
+    font-weight: 300;
+    color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+
+}
+
+.containers {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.main-container {
+    overflow: auto; /* Permet le défilement à l'intérieur du conteneur */
+    height: calc(100vh - 40px); /* Hauteur de la fenêtre moins la marge du body */
+    padding: 20px; /* Espacement intérieur pour éviter que le contenu touche les bords */
+}
+
+section {
+    padding: 20px 0;
+}
+
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    font-size: 2.2em;
+    border-bottom: 3px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: ;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Coins arrondis */
+    
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* Styles pour les boutons du menu */
+.menu-button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 25px; /* Boutons arrondis */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.menu-button:focus {
+    outline: none; /* Supprimer le contour au focus */
+}
+
+* Ajout d'une animation pour les sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Amélioration de la section contact */
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact ul li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Amélioration de la section compétences */
+#competences ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+#competences ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section expériences */
+#experiences ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section formations */
+#formations ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de la section loisirs */
+#loisirs ul li {
+    background: #f9f9f9;
+    border-left: 5px solid #555;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Style pour le bouton de retour en haut de la page */
+#back-to-top {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Position fixe pour rester visible lors du défilement */
+    bottom: 20px; /* Position en bas de la fenêtre */
+    right: 35px; /* Position à droite de la fenêtre */
+    z-index: 99; /* S'assure que le bouton est au-dessus des autres éléments */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour */
+    background-color: #333; /* Fond gris foncé */
+    color: white; /* Texte blanc */
+    cursor: pointer; /* Curseur en forme de main */
+    padding: 15px; /* Espacement interne */
+    border-radius: 100%; /* Forme ronde */
+    font-size: 18px; /* Taille de la flèche */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+
+#back-to-top:hover {
+    background-color: #555; /* Fond gris plus clair au survol */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles pour les écrans mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    header {
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    header h2 {
+        font-size: 1em;
+        margin: 5px 0 0;
+        font-weight: 300;
+        color: #ddd;
+    }
+
+    .container, .containers {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9em;
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+        border-bottom: 1px solid #555;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #444;
+    }
+
+    /* Supprimer le dernier séparateur */
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+
+    /* Cacher le menu par défaut */
+    nav#main-nav {
+        display: none;
+    }
+
+
+   /* Styles pour les écrans larges (769px et plus) */
+    @media (min-width: 769px) {
+    /* Afficher le menu en permanence */
+    nav#main-nav {
+        display: block;
+    }
+}
+
+
+    
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ul li {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px 0;
+        border-radius: 10px;
+    }
+
+    #back-to-top {
+        right: 20px;
+        bottom: 15px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #competences ul {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        animation: none;
+    }
+
+    .containers:hover {
+        transform: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .containers {
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 15px 0;
+    }
+}
