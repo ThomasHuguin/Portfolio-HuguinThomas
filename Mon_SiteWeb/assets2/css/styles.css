@@ -281,3 +281,19 @@ img {
 .card__tooltip {
   transition: opacity 0.4s, bottom 0.4s cubic-bezier(0.6, -0.5, 0.3, 1.5);
 }
+
+
+
+/* changement couleur fondu */
+:root {
+  /* ... autres variables ... */
+  --dark-gray-color: hsl(230, 15%, 30%); /* Nouvelle couleur gris foncé */
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease; /* Ajoutez cette ligne */
+}
