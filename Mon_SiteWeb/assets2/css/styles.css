@@ -314,3 +314,15 @@ body {
 .card__close-button:hover {
   color: var(--first-color);
 }
+
+/* refresh tel lors appui sur la photo pour fermer */
+.card__tooltip {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s, bottom 0.4s cubic-bezier(0.6, -0.5, 0.3, 1.5);
+}
+
+.card__article:hover .card__tooltip {
+  opacity: 1;
+  pointer-events: initial;
+}
