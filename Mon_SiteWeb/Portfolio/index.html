@@ -409,6 +409,26 @@ window.addEventListener('load', () => {
     <script src="assets/js/main.js"></script>
 
 
+    <!-- Script pour revenir en haut de la page au rafraîchissement -->
+    <script>
+        // Désactiver la restauration de la position de défilement par le navigateur
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    
+        // Forcer le défilement vers le haut au chargement de la page
+        window.onload = function() {
+            // Supprimer l'ancre de l'URL
+            if (window.location.hash) {
+                window.location.hash = ''; // Supprime l'ancre
+            }
+    
+            // Défile vers le haut (x: 0, y: 0)
+            window.scrollTo(0, 0);
+        };
+    </script>
+
+	      
 
 
 
