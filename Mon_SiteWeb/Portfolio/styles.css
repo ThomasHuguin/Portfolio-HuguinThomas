@@ -114,7 +114,7 @@ ul {
 }
 
 ul li {
-  background: ;
+ 
   margin: 10px 0;
   padding: 15px;
   border-left: 5px solid #333;
@@ -179,7 +179,7 @@ footer p {
   outline: none; /* Supprimer le contour au focus */
 }
 
-* Ajout d'une animation pour les sections */
+/* Ajout d'une animation pour les sections */
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -1119,6 +1119,9 @@ position: center;
 }
 
 }
+
+
+
 
 
 
