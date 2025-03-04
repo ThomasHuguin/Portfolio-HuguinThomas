@@ -17,7 +17,7 @@
    </head>
    <body>
       <div class="container">
-         <article class="card__article">
+         <article class="card__article" id="profile-card">
             <div class="card__profile">
                <img src="Mon_SiteWeb/assets2/img/profile.png" alt="image" class="card__profile-img">
             </div>
@@ -122,6 +122,23 @@
 
 
 
+
+<!--=============== Fond qui change de couleur ===============-->
+
+   <script>
+   const profileCard = document.getElementById('profile-card');
+   const bodyElement = document.body;
+ 
+   profileCard.addEventListener('mouseenter', () => {
+     bodyElement.style.backgroundColor = 'var(--dark-gray-color)';
+   });
+ 
+   profileCard.addEventListener('mouseleave', () => {
+     bodyElement.style.backgroundColor = 'var(--body-color)';
+   });
+   </script>
+
+      
 
 
    </body>
