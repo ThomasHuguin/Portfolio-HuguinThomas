@@ -209,3 +209,33 @@ img {
     padding-inline: 2rem;
   }
 }
+
+
+
+/*=============== Fermer sur mobile ===============*/
+/* Bouton de fermeture pour mobile */
+.card__close-button {
+  display: none; /* Caché par défaut */
+  position: initial;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+  z-index: 10;
+  padding-left: 92%;
+}
+
+
+/* Afficher le bouton de fermeture uniquement sur mobile */
+@media screen and (max-width: 540px) {
+  .card__close-button {
+     display: block;
+  }
+}
+
+.card__tooltip {
+  transition: opacity 0.4s, bottom 0.4s cubic-bezier(0.6, -0.5, 0.3, 1.5);
+}
