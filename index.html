@@ -13,15 +13,24 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="Mon_SiteWeb/assets2/css/styles.css">
 
-      <title>Carte de Profil - Huguin Thomas</title>
+      <title>Profile card</title>
+
    </head>
    <body>
 
-   <!-- Écran de chargement -->
-   <div class="loader">
-      <div class="loader__spinner"></div>
-   </div>
+   <button id="logoutButton" class="logout-button">
+    <i class="ri-logout-box-line"></i> <span>Déconnexion</span>
+   </button>
       
+    <script>
+        // Vérifiez si l'utilisateur est connecté
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            // Redirigez l'utilisateur vers la page de connexion/inscription
+            window.location.href = 'login.html';
+        }
+    </script>
+
       <div class="container">
          <article class="card__article" id="profile-card">
             <div class="card__profile">
@@ -123,15 +132,13 @@
                } else {
                   closeCard();
                }
+
+
+               
             });
          </script>
 
-
-
-
-<!--=============== Fond qui change de couleur ===============-->
-
-   <script>
+<script>
    const profileCard = document.getElementById('profile-card');
    const bodyElement = document.body;
  
@@ -142,22 +149,32 @@
    profileCard.addEventListener('mouseleave', () => {
      bodyElement.style.backgroundColor = 'var(--body-color)';
    });
-   </script>
+ </script>
+
+ 
 
 
 
 
 
-
-<!--=============== Actualiser lors de la fermeture sur tel ===============-->
-   <script>
+<script>
    document.getElementById('closeButton').addEventListener('click', function() {
       location.reload(); // Actualise la page
    });
-   </script>
+</script>
 
-   <script>
-   document.querySelector('.card__profile-img').addEventListener('click', function() {
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelector('.card__profile-img').addEventListener('click', function() {
    const tooltip = document.querySelector('.card__tooltip');
 
    // Vérifie si la fenêtre est visible (opacité > 0)
@@ -167,25 +184,21 @@
        tooltip.style.pointerEvents = 'none';
        location.reload(); // Actualise la page
    }
-   });
-   </script>
+});
+</script>
 
 
 
 
 
+<script>
+document.getElementById('logoutButton').addEventListener('click', function() {
+    localStorage.removeItem('userEmail'); // Supprime l'email du localStorage
+    window.location.href = 'login.html'; // Redirige vers la page de connexion
+});
+</script>
 
-<!--=============== Page chargement ===============-->
-   <script>
-   // Sélectionnez l'élément de l'écran de chargement
-   const loader = document.querySelector('.loader');
 
-   // Masquer l'écran de chargement une fois que la page est chargée
-   window.addEventListener('load', () => {
-      loader.classList.add('loader--hidden');
-   });
-   </script>
-      
 
    </body>
 </html>
