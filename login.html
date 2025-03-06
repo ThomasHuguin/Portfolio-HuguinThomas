@@ -99,7 +99,7 @@
                         </button>
 
                         <div class="login__register">
-                            Déjà un compte ? <a href="index.html">Se connecter</a>
+                            Déjà un compte ? <a href="login.html">Se connecter</a>
                         </div>
 
 
@@ -179,7 +179,7 @@ loginForm.addEventListener('submit', function (e) {
             if (user.password === password) {
                 // Connexion réussie
                 localStorage.setItem('loggedInUser', email);
-                window.location.href = 'file:///Users/pika/Downloads/MonSite/index.html'; // Redirige vers la page principale
+                window.location.href = 'index.html'; // Redirige vers la page principale
             } else {
                 alert('Mot de passe incorrect.');
             }
