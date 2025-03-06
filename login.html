@@ -110,25 +110,23 @@
                     <!--Reset password-->
                     <form action="" id="resetPasswordForm" style="display: none;" method="post" class="login__form">
                         <h1 class="login__title">Réinitialisation du mot de passe</h1>
-
                         <div class="login__inputs">
                             <div class="login__box">
                                 <input type="email" name="email" placeholder="Email" class="login__input" required>
                                 <i class="ri-mail-fill"></i>
                             </div>
-
                             <div class="login__box">
                                 <input type="password" name="password" placeholder="Nouveau mot de passe" class="login__input" required>
                                 <i class="ri-lock-2-fill"></i>
                             </div>
                         </div>
-
                         <button type="submit" class="card__button2">Réinitialiser</button>
-
                         <div class="login__register">
-                            Retour à la <a href="login.html">connexion</a>
+                            Retour à la <a href="#" id="backToLogin">connexion</a>
                         </div>
                     </form>
+
+                          
                 </div>
             </div>
         </article>
@@ -141,6 +139,7 @@ const toggleFormButton = document.getElementById('toggleFormButton');
 const loginForm = document.getElementById('loginForm');
 const registerForm = document.getElementById('registerForm');
 const resetPasswordForm = document.getElementById('resetPasswordForm');
+const forgotPasswordLink = document.getElementById('login__forgot');
 const formTitle = document.getElementById('formTitle');
 
 toggleFormButton.addEventListener('click', function (e) {
@@ -162,6 +161,52 @@ toggleFormButton.addEventListener('click', function (e) {
         });
 
 
+
+
+        //reset password
+// Gestion de la réinitialisation du mot de passe
+forgotPasswordLink.addEventListener('click', function (e) {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+
+    // Masquer les autres formulaires
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'none';
+
+    // Afficher le formulaire de réinitialisation du mot de passe
+    resetPasswordForm.style.display = 'block';
+});
+resetPasswordForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Empêche la soumission du formulaire
+
+    const email = document.querySelector('#resetPasswordForm input[name="email"]').value;
+    const newPassword = document.querySelector('#resetPasswordForm input[name="password"]').value;
+
+    // Vérification simple
+    if (email && newPassword) {
+        const storedUser = localStorage.getItem(email);
+        if (storedUser) {
+            // Met à jour le mot de passe
+            const user = JSON.parse(storedUser);
+            user.password = newPassword; // Met à jour le mot de passe
+            localStorage.setItem(email, JSON.stringify(user)); // Sauvegarde les modifications
+
+            alert('Mot de passe mis à jour avec succès. Vous pouvez maintenant vous connecter.');
+            resetPasswordForm.style.display = 'none'; // Masque le formulaire de réinitialisation
+            loginForm.style.display = 'block'; // Affiche le formulaire de connexion
+        } else {
+            alert('Aucun compte trouvé avec cet email.');
+        }
+    } else {
+        alert('Veuillez remplir tous les champs.');
+    }
+});
+
+
+
+
+
+
+        
 
 
 
