@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="Mon_SiteWeb/Portfolio/assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="Mon_SiteWeb/assets3/css/styles.css">
+
+    <title>Connexion / Inscription</title>
+</head>
+<body>
+    <div class="login">
+        <img src="Mon_SiteWeb/assets3/img/login-bg.png" alt="image" class="login__bg">
+        <article class="card__article">
+            <div class="card__content">
+                <header class="card__header">
+                    
+                </header>
+
+                <div class="card__data">
+                    <!-- Formulaire de connexion -->
+                    <form action="" id="loginForm" class="login__form">
+
+                    <!-- Texte "Connexion" ou "Inscription" -->
+                    <h1 class="login__title"><span id="formTitle">Connexion</span></h1>
+                        <!--<h1 class="login__title">Connexion</h1>-->
+                        <div class="login__inputs">
+                            <div class="login__box">
+                            <!--<label for="email">Email</label>-->
+                            <input type="email" placeholder="Email" name="email" required class="login__input">
+                            <i class="ri-mail-fill"></i>
+                            </div>
+
+                            <div class="login__box">
+                            <!--<label for="password">Mot de passe</label>-->
+                            <input type="password" placeholder="Mot de passe" name="password" required class="login__input">
+                            <i class="ri-lock-2-fill"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="login__check">
+                            <div class="login__check-box">
+                                <input type="checkbox" class="login__check-input" id="user-check">
+                                <label for="user-check" class="login__check-label">Se souvenir</label>
+                            </div>
+                            <div class="login__register">
+                            <a href="" id="login__forgot">Mot de passe oublié</a>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="card__button2">
+                            <i class="ri-login-box-line"></i> <span>Se connecter</span>
+                        </button>
+
+                    <!-- Bouton pour basculer entre les formulaires -->
+                    <!--<button id="toggleFormButton" class="card__button2">
+                        <i class="ri-user-add-line"></i> <span>Créer un compte</span>
+                    </button>-->
+                    <div class="login__register">
+                        Je n'ai pas de compte ? <a href="" id="toggleFormButton">S'enregistrer</a>
+                    </div>
+                    </form>
+
+                    <!-- Formulaire d'inscription -->
+                    <form id="registerForm" style="display: none;" class="login__form2">
+                        <h1 class="login__title"><span id="formTitle">Inscription</span></h1>
+
+                    <div class="login__inputs">
+                        <div class="login__box">
+                            <!--<label for="registerEmail">Email</label>-->
+                            <input type="email" placeholder="Email" id="registerEmail" name="registerEmail" required class="login__input">
+                            <i class="ri-mail-fill"></i>
+                        </div>
+
+                        <div class="login__box">
+                            <!--<label for="registerPassword">Mot de passe</label>-->
+                            <input type="password" placeholder="Mot de passe" id="registerPassword" name="registerPassword" required class="login__input">
+                            <i class="ri-lock-2-fill"></i>
+                        </div>
+
+                        <div class="login__box">
+                            <!--<label for="confirmPassword">Confirmer le mot de passe</label>-->
+                            <input type="password" placeholder="Mot de passe" id="confirmPassword" name="confirmPassword" required class="login__input">
+                            <i class="ri-lock-2-fill"></i>
+                        </div>
+                    </div>
+
+                        <button type="submit" class="card__button2">
+                            <i class="ri-user-add-line"></i> 
+                            <span>S'inscrire</span>
+                        </button>
+
+                        <div class="login__register">
+                            Déjà un compte ? <a href="index.html">Se connecter</a>
+                        </div>
+
+
+                        
+                    </form>
+
+
+                    <!--Reset password-->
+                    <form action="" id="resetPasswordForm" style="display: none;" method="post" class="login__form">
+                        <h1 class="login__title">Réinitialisation du mot de passe</h1>
+
+                        <div class="login__inputs">
+                            <div class="login__box">
+                                <input type="email" name="email" placeholder="Email" class="login__input" required>
+                                <i class="ri-mail-fill"></i>
+                            </div>
+
+                            <div class="login__box">
+                                <input type="password" name="password" placeholder="Nouveau mot de passe" class="login__input" required>
+                                <i class="ri-lock-2-fill"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="card__button2">Réinitialiser</button>
+
+                        <div class="login__register">
+                            Retour à la <a href="index.html">connexion</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!--=============== JS ===============-->
+    <script>
+// Basculer entre les formulaires de connexion et d'inscription et reset
+const toggleFormButton = document.getElementById('toggleFormButton');
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const resetPasswordForm = document.getElementById('resetPasswordForm');
+const formTitle = document.getElementById('formTitle');
+
+toggleFormButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Empêche le comportement par défaut du bouton
+
+            if (loginForm.style.display === 'none') {
+                // Afficher le formulaire de connexion
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                formTitle.textContent = 'Connexion';
+                toggleFormButton.innerHTML = '<i class="ri-user-add-line"></i> <span>Créer un compte</span>';
+            } else {
+                // Afficher le formulaire d'inscription
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                formTitle.textContent = 'Inscription';
+                toggleFormButton.innerHTML = '<i class="ri-login-box-line"></i> <span>Se connecter</span>';
+            }
+        });
+
+
+
+
+ // Gestion de la connexion
+loginForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Empêche la soumission du formulaire
+
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Vérification simple (vous pouvez ajouter une validation plus complexe)
+    if (email && password) {
+        const storedUser = localStorage.getItem(email);
+        if (storedUser) {
+            const user = JSON.parse(storedUser);
+            if (user.password === password) {
+                // Connexion réussie
+                localStorage.setItem('loggedInUser', email);
+                window.location.href = 'file:///Users/pika/Downloads/MonSite/index.html'; // Redirige vers la page principale
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        } else {
+            alert('Aucun compte trouvé avec cet email.');
+        }
+    } else {
+        alert('Veuillez remplir tous les champs.');
+    }
+});
+
+// Gestion de l'inscription
+registerForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Empêche la soumission du formulaire
+
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Vérification simple
+    if (email && password && confirmPassword) {
+        if (password === confirmPassword) {
+            // Vérifie si l'utilisateur existe déjà
+            if (localStorage.getItem(email)) {
+                alert('Un compte existe déjà avec cet email.');
+            } else {
+                // Enregistre l'utilisateur dans le localStorage
+                const user = { email, password };
+                localStorage.setItem(email, JSON.stringify(user));
+                alert('Compte créé avec succès. Vous pouvez maintenant vous connecter.');
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                formTitle.textContent = 'Connexion';
+                toggleFormButton.innerHTML = '<i class="ri-user-add-line"></i> <span>Créer un compte</span>';
+            }
+        } else {
+            alert('Les mots de passe ne correspondent pas.');
+        }
+    } else {
+        alert('Veuillez remplir tous les champs.');
+    }
+});
+
+
+
+    </script>
+</body>
+</html>
