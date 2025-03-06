@@ -163,6 +163,69 @@ toggleFormButton.addEventListener('click', function (e) {
 
 
 
+                // Remplir automatiquement les champs de connexion si "Se souvenir" est activé
+window.addEventListener('load', function () {
+    const rememberedEmail = localStorage.getItem('rememberedEmail');
+    const rememberedPassword = localStorage.getItem('rememberedPassword');
+
+    if (rememberedEmail && rememberedPassword) {
+        // Remplit les champs email et mot de passe
+        document.querySelector('#loginForm input[name="email"]').value = rememberedEmail;
+        document.querySelector('#loginForm input[name="password"]').value = rememberedPassword;
+
+        // Coche automatiquement la case "Se souvenir"
+        document.getElementById('user-check').checked = true;
+    }
+});
+// Gestion de la connexion avec "Se souvenir"
+loginForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Empêche la soumission du formulaire
+
+    const email = document.querySelector('#loginForm input[name="email"]').value;
+    const password = document.querySelector('#loginForm input[name="password"]').value;
+    const rememberMe = document.getElementById('user-check').checked; // Vérifie si "Se souvenir" est coché
+
+    // Vérification simple
+    if (email && password) {
+        const storedUser = localStorage.getItem(email);
+        if (storedUser) {
+            const user = JSON.parse(storedUser);
+            if (user.password === password) {
+                // Connexion réussie
+                localStorage.setItem('loggedInUser', email); // Enregistre l'utilisateur connecté
+
+                // Si "Se souvenir" est coché, enregistre les informations de connexion
+                if (rememberMe) {
+                    localStorage.setItem('rememberedEmail', email);
+                    localStorage.setItem('rememberedPassword', password);
+                } else {
+                    // Sinon, supprime les informations de connexion précédentes
+                    localStorage.removeItem('rememberedEmail');
+                    localStorage.removeItem('rememberedPassword');
+                }
+
+                window.location.href = 'index.html'; // Redirige vers la page principale
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        } else {
+            alert('Aucun compte trouvé avec cet email.');
+        }
+    } else {
+        alert('Veuillez remplir tous les champs.');
+    }
+});
+
+
+
+
+
+
+
+
+        
+
+
         //reset password
 // Gestion de la réinitialisation du mot de passe
 forgotPasswordLink.addEventListener('click', function (e) {
@@ -267,6 +330,21 @@ registerForm.addEventListener('submit', function (e) {
     } else {
         alert('Veuillez remplir tous les champs.');
     }
+});
+
+
+// Gestion de la déconnexion
+document.getElementById('logoutButton').addEventListener('click', function () {
+    // Supprime l'utilisateur connecté
+    localStorage.removeItem('loggedInUser');
+
+    // Si "Se souvenir" n'est pas activé, supprime également les informations de connexion
+    const rememberedEmail = localStorage.getItem('rememberedEmail');
+    if (!rememberedEmail) {
+        localStorage.removeItem('rememberedPassword');
+    }
+
+    window.location.href = 'login.html'; // Redirige vers la page de connexion
 });
 
 
