@@ -126,7 +126,7 @@
                         <button type="submit" class="card__button2">Réinitialiser</button>
 
                         <div class="login__register">
-                            Retour à la <a href="index.html">connexion</a>
+                            Retour à la <a href="login.html">connexion</a>
                         </div>
                     </form>
                 </div>
@@ -161,6 +161,32 @@ toggleFormButton.addEventListener('click', function (e) {
             }
         });
 
+
+                // Gestion de "Mot de passe oublié"
+const forgotPasswordLink = document.getElementById('login__forgot');
+
+forgotPasswordLink.addEventListener('click', function (e) {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+
+    // Masquer les autres formulaires
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'none';
+
+    // Afficher le formulaire de réinitialisation du mot de passe
+    resetPasswordForm.style.display = 'block';
+});
+
+// Gestion de "Retour à la connexion"
+const backToLoginLink = document.getElementById('backToLogin');
+backToLoginLink.addEventListener('click', function (e) {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+
+    // Masquer le formulaire de réinitialisation du mot de passe
+    resetPasswordForm.style.display = 'none';
+
+    // Afficher le formulaire de connexion
+    loginForm.style.display = 'block';
+});
 
 
 
