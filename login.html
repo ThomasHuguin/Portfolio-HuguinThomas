@@ -206,15 +206,16 @@ loginForm.addEventListener('submit', function (e) {
 
                 window.location.href = 'index.html'; // Redirige vers la page principale
             } else {
-                alert('Mot de passe incorrect.');
+                showAlert('Mot de passe incorrect.', 'error');
             }
         } else {
-            alert('Aucun compte trouvé avec cet email.');
+            showAlert('Aucun compte trouvé avec cet email.', 'error');
         }
     } else {
-        alert('Veuillez remplir tous les champs.');
+        showAlert('Veuillez remplir tous les champs.', 'error');
     }
 });
+
 
 
 
@@ -253,16 +254,51 @@ resetPasswordForm.addEventListener('submit', function (e) {
             user.password = newPassword; // Met à jour le mot de passe
             localStorage.setItem(email, JSON.stringify(user)); // Sauvegarde les modifications
 
-            alert('Mot de passe mis à jour avec succès. Vous pouvez maintenant vous connecter.');
+            showAlert('Mot de passe mis à jour avec succès. Vous pouvez maintenant vous connecter.', 'success');
             resetPasswordForm.style.display = 'none'; // Masque le formulaire de réinitialisation
             loginForm.style.display = 'block'; // Affiche le formulaire de connexion
         } else {
-            alert('Aucun compte trouvé avec cet email.');
+            showAlert('Aucun compte trouvé avec cet email.', 'error');
         }
     } else {
-        alert('Veuillez remplir tous les champs.');
+        showAlert('Veuillez remplir tous les champs.', 'error');
     }
 });
+
+
+
+
+
+
+
+
+function showAlert(message, type) {
+    const alert = document.createElement('div');
+    alert.className = `alert ${type}`;
+    let icon = 'ri-information-line'; // Icône par défaut
+
+    if (type === 'success') {
+        icon = 'ri-checkbox-circle-fill';
+    } else if (type === 'error') {
+        icon = 'ri-close-circle-fill';
+    } else if (type === 'warning') {
+        icon = 'ri-alert-fill';
+    } else if (type === 'info') {
+        icon = 'ri-information-fill';
+    }
+
+    alert.innerHTML = `<i class="${icon}"></i> ${message}`;
+    document.body.appendChild(alert);
+
+    // Afficher l'alerte
+    alert.style.display = 'flex';
+
+    // Masquer l'alerte après 3 secondes
+    setTimeout(() => {
+        alert.style.display = 'none';
+        alert.remove();
+    }, 3000);
+}
 
 
 
@@ -290,15 +326,18 @@ loginForm.addEventListener('submit', function (e) {
                 localStorage.setItem('loggedInUser', email);
                 window.location.href = 'index.html'; // Redirige vers la page principale
             } else {
-                alert('Mot de passe incorrect.');
+                showAlert('Mot de passe incorrect.', 'error');
             }
         } else {
-            alert('Aucun compte trouvé avec cet email.');
+            showAlert('Aucun compte trouvé avec cet email.', 'error');
         }
     } else {
-        alert('Veuillez remplir tous les champs.');
+        showAlert('Veuillez remplir tous les champs.', 'error');
     }
 });
+
+
+
 
 // Gestion de l'inscription
 registerForm.addEventListener('submit', function (e) {
@@ -313,22 +352,22 @@ registerForm.addEventListener('submit', function (e) {
         if (password === confirmPassword) {
             // Vérifie si l'utilisateur existe déjà
             if (localStorage.getItem(email)) {
-                alert('Un compte existe déjà avec cet email.');
+                showAlert('Un compte existe déjà avec cet email.', 'error');
             } else {
                 // Enregistre l'utilisateur dans le localStorage
                 const user = { email, password };
                 localStorage.setItem(email, JSON.stringify(user));
-                alert('Compte créé avec succès. Vous pouvez maintenant vous connecter.');
+                showAlert('Compte créé avec succès. Vous pouvez maintenant vous connecter.', 'success');
                 loginForm.style.display = 'block';
                 registerForm.style.display = 'none';
                 formTitle.textContent = 'Connexion';
                 toggleFormButton.innerHTML = '<i class="ri-user-add-line"></i> <span>Créer un compte</span>';
             }
         } else {
-            alert('Les mots de passe ne correspondent pas.');
+            showAlert('Les mots de passe ne correspondent pas.', 'error');
         }
     } else {
-        alert('Veuillez remplir tous les champs.');
+        showAlert('Veuillez remplir tous les champs.', 'error');
     }
 });
 
