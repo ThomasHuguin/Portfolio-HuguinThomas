@@ -1,213 +1,135 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="Mon_SiteWeb/Portfolio/assets/img/favicon.png" type="image/x-icon">
-
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="Mon_SiteWeb/assets2/css/styles.css">
-
-      <title>Carte de profil - Huguin Thomas</title>
-
-   </head>
-   <body>
-
-   <button id="logoutButton" class="logout-button">
-    <i class="ri-logout-box-line"></i> <span>Déconnexion</span>
-   </button>
-      
-   <script>
-      // Vérifiez si l'utilisateur est connecté
-const loggedInUser = localStorage.getItem('loggedInUser');
-if (!loggedInUser) {
-    // Redirigez l'utilisateur vers la page de connexion
-    window.location.href = 'login.html';
-}
-
-// Gestion de la déconnexion
-document.getElementById('logoutButton').addEventListener('click', function() {
-    localStorage.removeItem('loggedInUser'); // Supprime l'utilisateur connecté
-    window.location.href = 'login.html'; // Redirige vers la page de connexion
-});
-      
-  </script>
-
-      <div class="container">
-         <article class="card__article" id="profile-card">
-            <div class="card__profile">
-               <img src="Mon_SiteWeb/assets2/img/profile.png" alt="image" class="card__profile-img">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil de Thomas Huguin, Technicien Informatique">
+    <link rel="shortcut icon" href="Mon_SiteWeb/Portfolio/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css">
+    <link rel="stylesheet" href="Mon_SiteWeb/assets2/css/styles.css">
+    <title>Carte de profil - Huguin Thomas</title>
+</head>
+<body>
+    <div class="container">
+        <article class="card__article" id="profile-card">
+            <div class="card__profile" role="button" aria-label="Ouvrir la carte de profil">
+                <img src="Mon_SiteWeb/assets2/img/profile.png" alt="Photo de profil de Thomas Huguin" class="card__profile-img">
             </div>
 
-            <div class="card__tooltip">
-               <div class="card__content">
-                  <header class="card__header">
-                     <span>Social</span>
-
-                     <div class="card__social">
-                        <a href="Mon_SiteWeb/assets2/doc/CV - HUGUIN Thomas.pdf" target="_blank" class="card__social-link">
-                           <i class="ri-link"></i>
-                           <span class="card__tooltip-text">CV</span>
-                        </a>
-
-                        <a href="Mon_SiteWeb/Portfolio/index.html" target="_blank" class="card__social-link">
-                           <i class="ri-pages-line"></i>
-                           <span class="card__tooltip-text">Portfolio</span>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/thomas-huguin/" target="_blank" class="card__social-link">
-                           <i class="ri-linkedin-line"></i>
-                           <span class="card__tooltip-text">Linkedin</span>
-                        </a>
-
-                        <a href="https://www.youtube.com/@TotaZ" target="_blank" class="card__social-link">
-                           <i class="ri-youtube-line"></i>
-                           <span class="card__tooltip-text">Youtube</span>
-                        </a>
-
-                        <!--<a href="#" target="_blank" class="card__social-link">
-                           <i class="ri-mail-line"></i>
-                        </a>-->
-                        
-
-                     </div>
-                  </header>
-
-                  <div class="card__data">
-                     <div class="card__image">
-                        <div class="card__mask">
-                           <img src="Mon_SiteWeb/assets2/img/profile.png" alt="imgae" class="card__img">
+            <div class="card__tooltip" role="tooltip">
+                <div class="card__content">
+                    <header class="card__header">
+                        <span>Social</span>
+                        <div class="card__social">
+                            <a href="Mon_SiteWeb/assets2/doc/CV - HUGUIN Thomas.pdf" target="_blank" class="card__social-link" aria-label="Voir le CV">
+                                <i class="ri-link"></i>
+                                <span class="card__tooltip-text">CV</span>
+                            </a>
+                            <a href="Mon_SiteWeb/Portfolio/index.html" target="_blank" class="card__social-link" aria-label="Voir le portfolio">
+                                <i class="ri-pages-line"></i>
+                                <span class="card__tooltip-text">Portfolio</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/thomas-huguin/" target="_blank" class="card__social-link" aria-label="Voir le profil LinkedIn">
+                                <i class="ri-linkedin-line"></i>
+                                <span class="card__tooltip-text">LinkedIn</span>
+                            </a>
+                            <a href="https://www.youtube.com/@TotaZ" target="_blank" class="card__social-link" aria-label="Voir la chaîne YouTube">
+                                <i class="ri-youtube-line"></i>
+                                <span class="card__tooltip-text">YouTube</span>
+                            </a>
                         </div>
+                    </header>
 
-                        <span class="card__status"></span>
-                     </div>
+                    <div class="card__data">
+                        <div class="card__image">
+                            <div class="card__mask">
+                                <img src="Mon_SiteWeb/assets2/img/profile.png" alt="Photo de profil de Thomas Huguin" class="card__img">
+                            </div>
+                            <span class="card__status" aria-label="En ligne"></span>
+                        </div>
+                        <h2 class="card__name">Thomas Huguin</h2>
+                        <h3 class="card__profession">Technicien Informatique</h3>
+                        <a href="mailto:thomas.huguin2001@gmail.com" class="card__button" aria-label="Envoyer un message à Thomas Huguin">
+                            <i class="ri-chat-3-line"></i> <span>Envoyer un message</span>
+                        </a>
+                    </div>
 
-                     <h2 class="card__name">Thomas Huguin</h2>
-                     <h3 class="card__profession">Technicien Informatique</h3>
+                    <!-- Bouton de déconnexion intégré dans la carte -->
+                    <button id="logoutButton" class="card__logout-button" aria-label="Déconnexion">
+                        <i class="ri-logout-box-line"></i> <span>Déconnexion</span>
+                    </button>
 
-                     <a href="mailto:thomas.huguin2001@gmail.com" class="card__button">
-                        <i class="ri-chat-3-line"></i> <span>Envoyer un message</span>
-                     </a>
-                  </div>
-
-               <!-- Bouton de fermeture pour mobile -->
-               <button class="card__close-button" id="closeButton" aria-label="Close">
-                  <i class="ri-close-line"></i>
-               </button>
-
-               </div>
+                    <button class="card__close-button" id="closeButton" aria-label="Fermer la carte">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
             </div>
-         </article>
-      </div>
+        </article>
+    </div>
 
-         <!--=============== JS ===============-->
-         <script>
-            // Sélectionnez les éléments nécessaires
-            const closeButton = document.querySelector('.card__close-button');
-            const cardTooltip = document.querySelector('.card__tooltip');
-            const cardProfile = document.querySelector('.card__profile');
-      
-            // Fonction pour fermer la carte
-            const closeCard = () => {
-               cardTooltip.style.opacity = '0';
-               cardTooltip.style.pointerEvents = 'none';
-               cardTooltip.style.bottom = '-2rem'; // Réinitialiser la position du tooltip
-            };
-      
-            // Fonction pour ouvrir la carte
-            const openCard = () => {
-               cardTooltip.style.opacity = '1';
-               cardTooltip.style.pointerEvents = 'initial';
-               cardTooltip.style.bottom = '4rem'; // Position du tooltip lorsqu'il est ouvert
-            };
-      
-            // Ajoutez un événement de clic pour fermer la carte
-            closeButton.addEventListener('click', (e) => {
-               e.stopPropagation(); // Empêcher la propagation du clic pour ne pas rouvrir la carte immédiatement
-               closeCard();
-            });
-      
-            // Ajoutez un événement de clic sur le profil pour ouvrir/fermer la carte
-            cardProfile.addEventListener('click', () => {
-               if (cardTooltip.style.opacity === '0' || cardTooltip.style.opacity === '') {
-                  openCard();
-               } else {
-                  closeCard();
-               }
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            window.location.href = 'login.html';
+        }
 
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
 
-               
-            });
-         </script>
+        const closeButton = document.querySelector('.card__close-button');
+        const cardTooltip = document.querySelector('.card__tooltip');
+        const cardProfile = document.querySelector('.card__profile');
 
-<script>
-   const profileCard = document.getElementById('profile-card');
-   const bodyElement = document.body;
- 
-   profileCard.addEventListener('mouseenter', () => {
-     bodyElement.style.backgroundColor = 'var(--dark-gray-color)';
-   });
- 
-   profileCard.addEventListener('mouseleave', () => {
-     bodyElement.style.backgroundColor = 'var(--body-color)';
-   });
- </script>
+        const closeCard = () => {
+            cardTooltip.style.opacity = '0';
+            cardTooltip.style.pointerEvents = 'none';
+            cardTooltip.style.bottom = '-2rem';
+        };
 
- 
+        const openCard = () => {
+            cardTooltip.style.opacity = '1';
+            cardTooltip.style.pointerEvents = 'initial';
+            cardTooltip.style.bottom = '4rem';
+        };
 
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeCard();
+        });
 
+        cardProfile.addEventListener('click', () => {
+            if (cardTooltip.style.opacity === '0' || cardTooltip.style.opacity === '') {
+                openCard();
+            } else {
+                closeCard();
+            }
+        });
 
+        const profileCard = document.getElementById('profile-card');
+        const bodyElement = document.body;
 
+        profileCard.addEventListener('mouseenter', () => {
+            bodyElement.style.backgroundColor = 'var(--dark-gray-color)';
+        });
 
-<script>
-   document.getElementById('closeButton').addEventListener('click', function() {
-      location.reload(); // Actualise la page
-   });
-</script>
+        profileCard.addEventListener('mouseleave', () => {
+            bodyElement.style.backgroundColor = 'var(--body-color)';
+        });
 
+        document.getElementById('closeButton').addEventListener('click', function() {
+            location.reload();
+        });
 
-
-
-
-
-
-
-
-
-
-<script>
-document.querySelector('.card__profile-img').addEventListener('click', function() {
-   const tooltip = document.querySelector('.card__tooltip');
-
-   // Vérifie si la fenêtre est visible (opacité > 0)
-   if (tooltip.style.opacity === '1') {
-       // Ferme la fenêtre et actualise la page
-       tooltip.style.opacity = '0';
-       tooltip.style.pointerEvents = 'none';
-       location.reload(); // Actualise la page
-   }
-});
-</script>
-
-
-
-
-
-<script>
-   document.getElementById('logoutButton').addEventListener('click', function() {
-       localStorage.removeItem('loggedInUser'); // Supprime l'utilisateur connecté
-       window.location.href = 'login.html'; // Redirige vers la page de connexion
-   });
-</script>
-
-
-   </body>
+        document.querySelector('.card__profile-img').addEventListener('click', function() {
+            const tooltip = document.querySelector('.card__tooltip');
+            if (tooltip.style.opacity === '1') {
+                tooltip.style.opacity = '0';
+                tooltip.style.pointerEvents = 'none';
+                location.reload();
+            }
+        });
+    </script>
+</body>
 </html>
-
-
-
