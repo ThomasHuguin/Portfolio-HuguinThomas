@@ -403,27 +403,32 @@ body {
 
 
 /*=============== LOGOUT BUTTON ===============*/
-.logout-button {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background-color: #4f4f4f;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    font-size: var(--normal-font-size);
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    z-index: 1000;
-    transition: background-color 0.3s;
+/* Style pour le bouton de déconnexion intégré dans la carte */
+.card__logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4f4f4f;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem; /* Espacement par rapport aux autres éléments */
 }
 
-.logout-button:hover {
-    background-color: #3a3a3a;
+.card__logout-button:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.05);
+}
+
+.card__logout-button i {
+  font-size: 1.25rem;
+  margin-right: 0.5rem; /* Espacement entre l'icône et le texte */
 }
 
 .logout-button i {
