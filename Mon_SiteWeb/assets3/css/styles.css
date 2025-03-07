@@ -202,3 +202,46 @@ img {
     margin-bottom: 2rem;
   }
 }
+
+
+
+/*=============== ALERTS ===============*/
+.alert {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: hsla(0, 0%, 100%, .1);
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.alert i {
+  font-size: 1.25rem;
+}
+
+.alert.success {
+  background-color: hsla(120, 100%, 25%, 0.7); /* Vert pour succès */
+}
+
+.alert.error {
+  background-color: hsla(0, 100%, 50%, 0.7); /* Rouge pour erreur */
+}
+
+.alert.warning {
+  background-color: hsla(60, 100%, 50%, 0.7); /* Jaune pour avertissement */
+}
+
+.alert.info {
+  background-color: hsla(240, 100%, 50%, 0.7); /* Bleu pour information */
+}
